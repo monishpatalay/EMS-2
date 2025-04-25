@@ -44,7 +44,7 @@ export default function PlaceGallery({ place }) {
           <div className="col-span-2 h-full">
             <img
               onClick={() => setShowAllPhotos(true)}
-              src={`http://localhost:3000/uploads/${place.photos[0]}`}
+              src={`https://ems-2-v9qq.onrender.com/uploads/${place.photos[0]}`}
               className="w-full h-full object-cover cursor-pointer rounded-l-3xl"
               alt=""
             />
@@ -56,7 +56,7 @@ export default function PlaceGallery({ place }) {
           {place.photos?.[1] && (
             <img
               onClick={() => setShowAllPhotos(true)}
-              src={`http://localhost:3000/uploads/${place.photos[1]}`}
+              src={`https://ems-2-v9qq.onrender.com/uploads/${place.photos[1]}`}
               className="w-full h-full object-cover cursor-pointer rounded-tr-3xl"
               alt=""
             />
@@ -64,7 +64,7 @@ export default function PlaceGallery({ place }) {
           {place.photos?.[2] && (
             <img
               onClick={() => setShowAllPhotos(true)}
-              src={`http://localhost:3000/uploads/${place.photos[2]}`}
+              src={`https://ems-2-v9qq.onrender.com/uploads/${place.photos[2]}`}
               className="w-full h-full object-cover cursor-pointer rounded-br-3xl"
               alt=""
             />
