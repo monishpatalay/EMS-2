@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary : #f5385D;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="name"] ,input[type="number"], input[type="tel"], textarea {
+  @apply w-full p-2 border my-2 border-gray-300 rounded-2xl;
+}
+
+textarea {
+  height: 150px;
+}
+
+button.btn-primary{
+  @apply bg-primary text-white p-2 border border-gray-300 rounded-2xl w-full;
+}
+
+
+/* input:focus {
+  outline: none;    
+  box-shadow: none; 
+} */
