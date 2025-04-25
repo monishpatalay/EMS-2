@@ -236,17 +236,25 @@ app.get('/places', async (req, res) => {
 
 app.post('/bookings', async (req, res) => {
   try {
-    const userData = await getUserDataFromReq(req); // ✅ FIXED
-    const { place, checkIn, price, checkOut, noOfGuests, name, mobile } = req.body;
+    console.log("🟡 Booking request received");
+    console.log("Body:", req.body);
+    const userData = await getUserDataFromReq(req);
+    console.log("User data:", userData);
+
+    const { place, checkIn, price, checkOut, guests, name, phone } = req.body;
+
+    if (!place || !checkIn || !checkOut || !guests || !name || !phone) {
+      return res.status(400).json({ error: "Missing required fields" });
+    }
 
     const bookingDoc = await Booking.create({
       place,
       checkIn,
       checkOut,
-      noOfGuests,
+      noOfGuests: guests,
       name,
       price,
-      mobile,
+      mobile: phone,
       user: userData.id,
     });
 
@@ -256,6 +264,7 @@ app.post('/bookings', async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 });
+
 
 
 
