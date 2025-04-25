@@ -29,7 +29,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // Serve s
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173","https://ems-2-pi.vercel.app"],
   })
 );
 
