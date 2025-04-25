@@ -15,7 +15,7 @@ export default function LoginPage() {
     ev.preventDefault();
     // Make sure to call the correct URL (note the port).
     try{
-        const {data} = await axios.post("http://localhost:3000/login", { email, password });
+        const {data} = await axios.post("https://ems-2-v9qq.onrender.com/login", { email, password });
         setUser(data);
         alert("User logged in successfully");
         setRedirect(true);
