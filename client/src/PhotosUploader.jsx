@@ -88,7 +88,7 @@ export default function PhotosUploader({ addedPhotos, setAddedPhotos }) {
             >
               <img
                 className="w-full h-full object-cover rounded-2xl"
-                src={`http://localhost:3000/uploads/${link}`}
+                src={`https://ems-2-v9qq.onrender.com/uploads/${link}`}
                 alt=""
               />
 
